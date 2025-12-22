@@ -106,7 +106,6 @@ body {
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(106, 56, 194, 0.4);
 }
 
@@ -120,7 +119,6 @@ body {
 
 .btn-secondary:hover {
     background-color: #3b5bdb;
-    transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(74, 108, 247, 0.4);
 }
 
@@ -194,10 +192,7 @@ body {
     border: 1px solid transparent;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
+
 
 .service-card.active {
     border-color: var(--primary-pink);
@@ -434,16 +429,16 @@ body {
 
 .deco-arrow-left {
     position: absolute;
-    left: 40px;
-    top: -240px;
+    right: 40px;
+    top: -200px;
     width: 250px;
     opacity: 0.8;
 }
 
 .deco-arrow-right {
     position: absolute;
-    right: 40px;
-    top: 60px;
+    left: 40px;
+    top: -100px;
     width: 250px;
     opacity: 0.8;
 }
@@ -454,4 +449,675 @@ body {
     top: 90px;
     width: 12px;
     height: 12px;
+}
+
+/* Case Studies Section */
+.casestudies-section {
+    padding: 0 0 120px;
+}
+
+.casestudy-card {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: 50px;
+}
+
+.casestudy-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.casestudy-image {
+    flex: 0 0 480px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* Needed for absolute positioning of child */
+}
+
+
+
+.casestudy-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.casestudy-content {
+    flex: 1;
+    padding: 60px 70px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.casestudy-card:nth-child(1) .casestudy-content {
+    background-color: #EDF2FC;
+}
+
+.casestudy-card:nth-child(2) .casestudy-content {
+    background-color: #E0F7F7;
+}
+
+.casestudy-card:nth-child(3) .casestudy-content {
+    background-color: #FFE8F5;
+}
+
+.casestudy-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.casestudy-description {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.casestudy-link {
+    color: var(--primary-pink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.3s;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+.casestudy-link:hover {
+    gap: 15px;
+}
+
+.casestudy-link .arrow {
+    font-size: 18px;
+}
+
+.casestudies-footer {
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.casestudies-more-link {
+    color: var(--primary-pink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: gap 0.3s;
+}
+
+.casestudies-more-link:hover {
+    gap: 15px;
+}
+
+.casestudies-more-link .arrow {
+    font-size: 20px;
+}
+
+/* ================= WAY OF BUILDING ================= */
+
+.way-building-section {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.way-building-item {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 120px;
+}
+
+.way-building-item:last-child {
+    margin-bottom: 0;
+}
+
+.way-building-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.way-text {
+    flex: 1;
+}
+
+.way-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.way-desc {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.way-quote {
+    border-left: 3px solid var(--primary-pink);
+    padding-left: 20px;
+    color: var(--primary-pink);
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 30px 0;
+}
+
+.way-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.profile-role {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.way-image-wrapper {
+    flex: 1.2;
+    position: relative;
+}
+
+.way-main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative Blobs */
+.blob-deco {
+    position: absolute;
+    z-index: 1;
+}
+
+.blob-top-left {
+    top: -30px;
+    left: -30px;
+    width: 60px;
+}
+
+.blob-top-right {
+    top: -20px;
+    right: -20px;
+    width: 30px;
+}
+
+.blob-bottom-right {
+    bottom: -20px;
+    right: 40px;
+    width: 20px;
+    z-index: 3;
+}
+
+.blob-bottom-left {
+    bottom: -30px;
+    left: -20px;
+    width: 50px;
+    z-index: 1;
+}
+
+@media (max-width: 992px) {
+
+    .way-building-item,
+    .way-building-item.reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* ================= DESIGN APPROACH ================= */
+
+.approach-section {
+    padding: 100px 0;
+    background-color: #FAFAFA;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.approach-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    border: 1px solid #EAEAEA;
+    transition: all 0.3s ease;
+}
+
+.approach-card:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.approach-icon-wrapper {
+    flex-shrink: 0;
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.approach-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Icon Backgrounds */
+.bg-rocket {
+    background-color: #292930;
+}
+
+.bg-code {
+    background-color: #5593F3;
+}
+
+.bg-heart {
+    background-color: #FF4781;
+}
+
+.bg-shield {
+    background-color: #46D39E;
+}
+
+.bg-check {
+    background-color: #FFC25F;
+}
+
+.bg-lock {
+    background-color: #8C4AF2;
+}
+
+.approach-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.approach-content p {
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* Highlight Colors */
+.highlight-rocket {
+    color: #292930;
+    font-weight: 600;
+}
+
+/* Or just bold */
+.highlight-code {
+    color: #5593F3;
+    font-weight: 600;
+}
+
+.highlight-heart {
+    color: #FF4781;
+    font-weight: 600;
+}
+
+.highlight-shield {
+    color: #46D39E;
+    font-weight: 600;
+}
+
+.highlight-check {
+    color: #FFA115;
+    font-weight: 600;
+}
+
+.highlight-lock {
+    color: #8C4AF2;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ================= TECH STACK ================= */
+
+.tech-stack-section {
+    padding: 100px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* "Our" text style */
+.tech-stack-section .section-title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #292930;
+    line-height: 1.4;
+    margin-top: 20px;
+}
+
+/* "Tech Stack" text style */
+.tech-stack-section .section-title strong {
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #1A1A1A;
+}
+
+.tech-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    /* Much wider spacing */
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.tech-tab-link {
+    font-size: 18px;
+    color: #525260;
+    /* Darker grey for inactive */
+    font-weight: 500;
+    text-decoration: none;
+    padding-bottom: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tech-tab-link:hover {
+    color: #C035A2;
+}
+
+.tech-tab-link.active {
+    color: #C035A2;
+    font-weight: 700;
+}
+
+/* Refined underline style */
+.tech-tab-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background-color: #C035A2;
+    border-radius: 4px;
+}
+
+.tech-grid {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.tech-logo {
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .tech-tabs {
+        gap: 30px;
+    }
+}
+
+/* ================= DEVELOPMENT PROCESS ================= */
+.development-process-section {
+    padding: 100px 0;
+    background-color: #FAFAFA;
+    /* Light gray background to match clean look */
+    /* Ensure it doesn't clash with previous section if it's white */
+}
+
+/* Ensure container allows relative positioning for arrows/decorations if needed */
+.development-process-section .container {
+    position: relative;
+}
+
+.timeline-wrapper {
+    margin-top: 80px;
+    position: relative;
+    /* We don't need padding here as grid handles spacing */
+}
+
+.process-grid {
+    display: grid;
+    /* 7 Columns allow for 50% overlap of 2-column wide cards */
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto 80px auto;
+    column-gap: 30px;
+}
+
+/* The horizontal line container spans all columns in row 2 */
+.timeline-line-container {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    width: 100%;
+    /* We align the line in the center of this 80px tall row */
+    display: flex;
+    align-items: center;
+}
+
+.timeline-line {
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #FF4781 0%, #6A38C2 100%);
+    position: relative;
+    border-radius: 2px;
+}
+
+.timeline-trophy {
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+/* Card Positioning: 7-Column Grid, Span 2 */
+/* 
+   Row 1: 
+   #1: Col 1-3. 
+   #3: Col 3-5. 
+   #5: Col 5-7. 
+*/
+.pos-1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.pos-3 {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+}
+
+.pos-5 {
+    grid-column: 5 / span 2;
+    grid-row: 1;
+}
+
+/* 
+   Row 3: 
+   #2: Col 2-4 (Centered under overlapping gap of 1 & 3).
+   #4: Col 4-6.
+   #6: Col 6-8 (Ends at 8, so we need 7 cols? No 1..8 is 7 tracks).
+   Wait, 7 columns means lines 1 to 8.
+   Col 6 / span 2 -> 6, 7. Ends at 8. Correct.
+*/
+.pos-2 {
+    grid-column: 2 / span 2;
+    grid-row: 3;
+}
+
+.pos-4 {
+    grid-column: 4 / span 2;
+    grid-row: 3;
+}
+
+.pos-6 {
+    grid-column: 6 / span 2;
+    grid-row: 3;
+}
+
+/* Center content in the grid cells */
+.dev-card {
+    min-width: 0;
+    width: 100%;
+    /* Ensure no unwanted left border on desktop */
+    border-left: 1px solid #EAEAEA;
+    overflow: visible;
+    /* connector visibility */
+    position: relative;
+}
+
+
+/* Connection Lines (Vertical) */
+/* Top cards need a line going DOWN to the timeline */
+.card-top::after {
+    content: '';
+    position: absolute;
+    bottom: -43px;
+    left: 40px;
+    width: 2px;
+    height: 45px;
+    background: #FF4781;
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Bottom cards need a line going UP to the timeline */
+.card-bottom::after {
+    content: '';
+    position: absolute;
+    top: -43px;
+    left: 40px;
+    width: 2px;
+    height: 45px;
+    background: #FF4781;
+    opacity: 1;
+    z-index: 10;
+}
+
+/* Refined Card Styles */
+.dev-card {
+    background: #fff;
+    border: 1px solid #EAEAEA;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    transition: all 0.3s ease;
+    /* Optional slight shadow by default */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+}
+
+.dev-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(255, 71, 129, 0.3);
+}
+
+.dev-card-number {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #FF4781 0%, #6A38C2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.dev-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #1A1A1A;
+}
+
+.dev-card-desc {
+    font-size: 13px;
+    color: #55606C;
+    line-height: 1.7;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .process-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .timeline-line-container {
+        display: none;
+        /* Hide the complex timeline on mobile */
+    }
+
+    .card-top::after,
+    .card-bottom::after {
+        display: none;
+        /* Hide connectors */
+    }
+
+    .timeline-trophy {
+        display: none;
+    }
+
+    /* Add a simple left border or counter for mobile list feeling? */
+    .dev-card {
+        border-left: 1px solid #EAEAEA;
+    }
 }
